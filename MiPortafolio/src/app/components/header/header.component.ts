@@ -9,25 +9,22 @@ import { HeaderService } from 'src/app/services/header.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
  public usuario : Usuario | undefined;
  public editUsuario: Usuario | undefined;
 
-  constructor(private headerService: HeaderService) {
+  constructor(private headerService : HeaderService) {
     this.getUser();
    }
 
    public getUser():void {
     this.headerService.getUser().subscribe({
-      next: (Response: Usuario) => {
-        this.usuario=Response;
+      next: (response: Usuario) =>{
+        this.usuario=response;
       },
       error:(error:HttpErrorResponse)=>{
         alert(error.message);
       }
-      
-      );
-      )
+  
     })
    }
 

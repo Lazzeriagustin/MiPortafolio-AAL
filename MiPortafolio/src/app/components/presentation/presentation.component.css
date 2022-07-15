@@ -1,0 +1,9 @@
+.row {
+    background-color: #a1b5cb ;
+  }
+  #carouselExampleControls {
+      width: 950px;
+      height: 660px;
+      margin: auto;
+      padding: 20px;
+    }

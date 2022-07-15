@@ -1,0 +1,15 @@
+div {
+    background-color: #7fa6d3;
+    
+}
+
+img {
+    width: 150px;
+}
+
+.redes {
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+    
+}

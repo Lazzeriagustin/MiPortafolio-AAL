@@ -8,7 +8,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class HeaderService {
-  private apiServerUrl=environment.apiBaseUrl;
+  private apiServerUrl='*';
 
   constructor(private http: HttpClient ) { }
 

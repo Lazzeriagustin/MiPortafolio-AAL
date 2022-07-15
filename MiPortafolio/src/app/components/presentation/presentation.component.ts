@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Presentation } from 'src/app/models/Presentation';
+import { PresentationService } from 'src/app/services/presentation.service';
 
 @Component({
   selector: 'app-presentation',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationComponent implements OnInit {
 
-  constructor() { }
+  public presentation:Presentation[]=[];
+  public editPresentation:Presentation | undefined;
+  public deletePresentation:Presentation | undefined;
+
+  constructor(private presentationService:PresentationService)
+   { }
 
   ngOnInit(): void {
+    this.getPresentation();
+
+  }
+
+  public getPresentation():void{
+    this.
   }
 
 }

@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Presentation } from 'src/app/models/Presentation';
 import { PresentationService } from 'src/app/services/presentation.service';
@@ -22,7 +23,15 @@ export class PresentationComponent implements OnInit {
   }
 
   public getPresentation():void{
-    this.
+    this.presentationService.getPresentation().subscribe({
+      next:(Response: Presentation[]) =>{
+        this.presentation=Response;
+
+      },
+      error:(error:HttpErrorResponse) =>{
+        alert(error.message);
+      }
+    })
   }
 
 }
